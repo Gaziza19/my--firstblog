@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/post_list.css' %}">
+    <title>Blog</title>
+  </head>
+  <body>
+    <h1>Our posts</h1>
+    kkk
+    {% for post in posts %}
+    <div>
+    <p>published: {{ post.published_date }}</p>
+    <h2><a href="">{{ post.title }}</a></h2>
+    <p>{{ post.text|linebreaksbr }}</p>
+    <img scr="{% static "images/1234.jpg" %}" alt="My image">
+    </div>
+    {% endfor %}
+  </body>
+</html>
